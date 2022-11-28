@@ -21,24 +21,29 @@ if (isUpperCase) {
 if (isLowerCase) {
   //USE LOWER CASE LETTERS
   console.log("lowercase");
+  chooseFrom += letters;
 }
 
 if (isSpecial) {
   //USE SPECIAL CHARACTERS
   console.log("special");
+  chooseFrom += special;
 }
 if (isNumbers) {
-  console.log("numbers");
+  console.log("numbers"); 
+  chooseFrom += numbers;
   //USE NUMBERS
 }
 
-  return "";
+  return "your password here";
 }
 
 //Write password to the #password inout
 function writePassword() {
 
-  var password = generatePassword();
+  var password = generatePassword(letters, specials, numbers); {
+    
+  }
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
