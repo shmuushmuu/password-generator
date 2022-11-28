@@ -7,10 +7,10 @@ function generatePassword(){
   var special = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "1234567890";
   var upLetters = letters.toUpperCase;
-  var isUpperCase = confirm("Would you like to use uppercase?");
-  var isLowerCase = confirm("Would you like to use lower case?");
-  var isSpecial = confirm("Would you like to use special characters?");
-  var isNumber = confirm("Would you like to use numbers?");
+  var isUpperCase = confirm("Would you like to include uppercase letters in your password?");
+  var isLowerCase = confirm("Would you like to include lower case letters in your password?");
+  var isSpecial = confirm("Would you like to include special characters in your password?");
+  var isNumber = confirm("Would you like to include numbers in your password?");
 
 if (isUpperCase) {
   //USE UPPER CASE LETTERS
@@ -23,7 +23,7 @@ if (isLowerCase) {
   console.log("lowercase");
 }
 
-if (isUSpecial) {
+if (isSpecial) {
   //USE SPECIAL CHARACTERS
   console.log("special");
 }
