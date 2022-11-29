@@ -11,6 +11,8 @@ function generatePassword(){
   var isLowerCase = confirm("Would you like to include lower case letters in your password?");
   var isSpecial = confirm("Would you like to include special characters in your password?");
   var isNumber = confirm("Would you like to include numbers in your password?");
+  var sum = 0;
+  for (var i = 1; i <= num, i++);
 
 if (isUpperCase) {
   //USE UPPER CASE LETTERS
@@ -34,7 +36,7 @@ if (isNumbers) {
   chooseFrom += numbers;
   //USE NUMBERS
 }
-
+  console.log(password);
   return "your password here";
 }
 
@@ -42,7 +44,7 @@ if (isNumbers) {
 function writePassword() {
 
   var password = generatePassword(letters, specials, numbers); {
-    
+
   }
   var passwordText = document.querySelector("#password");
 
