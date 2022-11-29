@@ -3,10 +3,15 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword(){
   //YOUR CODE GOES HERE
+  var characters = [letters, upLetters, special, numbers];
   var letters = "abcdefghijklmnopqrstuvwxyz";
   var special = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "1234567890";
   var upLetters = letters.toUpperCase;
+  var passwordLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
+  if (passwordLength) {
+    passwordLength > 8 characters
+  }
   var isUpperCase = confirm("Would you like to include uppercase letters in your password?");
   var isLowerCase = confirm("Would you like to include lower case letters in your password?");
   var isSpecial = confirm("Would you like to include special characters in your password?");
