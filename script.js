@@ -10,13 +10,15 @@ function generatePassword(){
   var chooseFrom = "";
   
   //First prompt: length of password
-  var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
+    var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
 
   for (pwLength; pwLength < 8 || pwLength > 128;) {
     alert("Please request a length between 8 and 128 characters.");
     var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
   }
+
   //Confirms: finding out what kind of characters the user needs
+  
   var isUpperCase = confirm("Would you like to include uppercase letters in your password?");
   var isLowerCase = confirm("Would you like to include lower case letters in your password?");
   var isSpecial = confirm("Would you like to include special characters in your password?");
@@ -30,20 +32,20 @@ function generatePassword(){
   if (isLowerCase) {
     //USE LOWER CASE LETTERS
     chooseFrom = chooseFrom.concat(letters);
-}
+  }
 
-if (isSpecial) {
-  //USE SPECIAL CHARACTERS
-  chooseFrom = chooseFrom.concat(specials);
-}
-if (isNumber) {
+  if (isSpecial) {
+    //USE SPECIAL CHARACTERS
+    chooseFrom = chooseFrom.concat(specials);
+  }
+  if (isNumber) {
   chooseFrom = chooseFrom.concat(numbers);
   //USE NUMBERS
-}
+  }
 
 // if no characters requested
-if (!isUpperCase && !isLowerCase && !isNumber && !isNumber) {
-  alert("I need something to go off of, my brother in Christ.")
+if (!isUpperCase && !isLowerCase && !isSpecial && !isNumber) {
+  alert("I need something to go off of, my brother in Christ. Click the 'generate password' button again. Please.... Please.");
 }
 
 // var sum = 0;
@@ -51,7 +53,7 @@ if (!isUpperCase && !isLowerCase && !isNumber && !isNumber) {
 //var random = Math.floor(Math.random() * characters.length);
 
 console.log(chooseFrom);
-return "your password here";
+return chooseFrom;
 }
 
 //Write password to the #password input
