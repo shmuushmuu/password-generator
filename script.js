@@ -6,13 +6,13 @@ function generatePassword(){
   var letters = "abcdefghijklmnopqrstuvwxyz";
   var specials = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "1234567890";
-  var upLetters = letters.toUpperCase;
-  //var chooseFrom = "";
+  var upLetters = letters.toUpperCase();
+  var chooseFrom = "";
   var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
 
   for (pwLength; pwLength < 8 || pwLength > 128;) {
-    alert("Please request a length between 8 and 128 characers.");
-    var pwLength;
+    alert("Please request a length between 8 and 128 characters.");
+    var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
   }
 
   var isUpperCase = confirm("Would you like to include uppercase letters in your password?");
@@ -22,31 +22,28 @@ function generatePassword(){
   
   if (isUpperCase) {
     //USE UPPER CASE LETTERS
-    console.log("uppercase");
-    chooseFrom += upLetters;
+    chooseFrom = chooseFrom.concat(upLetters);
   }
   
   if (isLowerCase) {
     //USE LOWER CASE LETTERS
-    console.log("lowercase");
-  chooseFrom += letters;
+    chooseFrom = chooseFrom.concat(letters);
 }
 
 if (isSpecial) {
   //USE SPECIAL CHARACTERS
-  console.log("specials");
-  chooseFrom += specials;
+  chooseFrom = chooseFrom.concat(specials);
 }
 if (isNumber) {
-  console.log("numbers"); 
-  chooseFrom += numbers;
+  chooseFrom = chooseFrom.concat(numbers);
   //USE NUMBERS
 }
+
 // var sum = 0;
 // for (var i = 1; i <= num, i++);
-var random = Math.floor(Math.random() * characters.length);
+//var random = Math.floor(Math.random() * characters.length);
 
-console.log(password);
+console.log(chooseFrom);
 return "your password here";
 }
 
