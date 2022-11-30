@@ -5,14 +5,16 @@ function generatePassword(){
   //YOUR CODE GOES HERE
   var characters = [letters, upLetters, special, numbers];
   var letters = "abcdefghijklmnopqrstuvwxyz";
-  var special = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
+  var specials = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "1234567890";
   var upLetters = letters.toUpperCase;
-  var pwLengthRequest = alert("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
-  if (characters) {
+  var pwLengthRequest = prompt('This generator makes passwords between 8 and 128 characters. How many characters do you need?');
+
+  if (
     passwordLength < 8 || passwordLength > 128
     return pwLengthRequest;
-  } else {
+  )
+  ) } else {
 
   }
 
@@ -37,8 +39,8 @@ if (isLowerCase) {
 
 if (isSpecial) {
   //USE SPECIAL CHARACTERS
-  console.log("special");
-  chooseFrom += special;
+  console.log("specials");
+  chooseFrom += specials;
 }
 if (isNumber) {
   console.log("numbers"); 
