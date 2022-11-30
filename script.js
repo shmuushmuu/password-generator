@@ -14,7 +14,7 @@ function generatePassword(){
     passwordLength < 8 || passwordLength > 128
     return pwLengthRequest;
   )
-  ) } else {
+  } else {
 
   }
 
@@ -24,6 +24,7 @@ function generatePassword(){
   var isNumber = confirm("Would you like to include numbers in your password?");
   var sum = 0;
   for (var i = 1; i <= num, i++);
+  var random = Math.floor(Math.random() * characters.length);
 
 if (isUpperCase) {
   //USE UPPER CASE LETTERS
