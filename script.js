@@ -39,21 +39,24 @@ function generatePassword(){
     chooseFrom = chooseFrom.concat(specials);
   }
   if (isNumber) {
-  chooseFrom = chooseFrom.concat(numbers);
-  //USE NUMBERS
+    chooseFrom = chooseFrom.concat(numbers);
+    //USE NUMBERS
   }
 
 // if no characters requested
 if (!isUpperCase && !isLowerCase && !isSpecial && !isNumber) {
-  alert("I need something to go off of, my brother in Christ. Click the 'generate password' button again. Please.... Please.");
+  alert("I need something to go off of, my brother in Christ. I can only give you a password of letters, numbers, and symbols... I'm only so smart. Please, click the 'generate password' button again.");
 }
 
 // var sum = 0;
-// for (var i = 1; i <= num, i++);
-//var random = Math.floor(Math.random() * characters.length);
+for (var i = 0; i < pwLength; i++) {
+  var random = Math.floor(Math.random() * chooseFrom.length);
+  var characters = chooseFrom.charAt(random);
+  password = password.concat(characters);
+  console.log("password" + password);
+}
 
-console.log(chooseFrom);
-return chooseFrom;
+return password;
 }
 
 //Write password to the #password input
