@@ -3,11 +3,12 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword(){
   //YOUR CODE GOES HERE
-  var characters = letters + upLetters + specials + numbers;
+  var characters = [letters + upLetters + specials + numbers];
   var letters = "abcdefghijklmnopqrstuvwxyz";
   var specials = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "1234567890";
   var upLetters = letters.toUpperCase;
+  var chooseFrom = "";
   var pwLengthRequest = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
 
   // if (
