@@ -10,12 +10,10 @@ function generatePassword(){
   var upLetters = letters.toUpperCase;
   var pwLengthRequest = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
 
-  pwLengthRequest();
-
-  if (
-    passwordLength >= 8 || passwordLength <= 128
-  )
-  {
+  // if (
+  //   passwordLength >= 8 || passwordLength <= 128
+  // )
+  // {
 
   var isUpperCase = confirm("Would you like to include uppercase letters in your password?");
   var isLowerCase = confirm("Would you like to include lower case letters in your password?");
@@ -49,7 +47,6 @@ if (isNumber) {
 }
   console.log(password);
   return "your password here";
-}
 }
 
 //Write password to the #password input
