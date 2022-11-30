@@ -7,31 +7,28 @@ function generatePassword(){
   var specials = "!#$%&()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "1234567890";
   var upLetters = letters.toUpperCase;
-  var chooseFrom = "";
-  var pwLengthRequest = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
+  //var chooseFrom = "";
+  var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
 
-  for (pwLengthRequest; pwLengthRequest < 8 || pwLengthRequest > 128) {
-    alert = ("Please request a length between 8 and 128 characers.");
-    var pwLengthRequest;
+  for (pwLength; pwLength < 8 || pwLength > 128;) {
+    alert("Please request a length between 8 and 128 characers.");
+    var pwLength;
   }
 
   var isUpperCase = confirm("Would you like to include uppercase letters in your password?");
   var isLowerCase = confirm("Would you like to include lower case letters in your password?");
   var isSpecial = confirm("Would you like to include special characters in your password?");
   var isNumber = confirm("Would you like to include numbers in your password?");
-  // var sum = 0;
-  // for (var i = 1; i <= num, i++);
-  var random = Math.floor(Math.random() * characters.length);
-
-if (isUpperCase) {
-  //USE UPPER CASE LETTERS
-  console.log("uppercase");
-  chooseFrom += upLetters;
-}
-
-if (isLowerCase) {
-  //USE LOWER CASE LETTERS
-  console.log("lowercase");
+  
+  if (isUpperCase) {
+    //USE UPPER CASE LETTERS
+    console.log("uppercase");
+    chooseFrom += upLetters;
+  }
+  
+  if (isLowerCase) {
+    //USE LOWER CASE LETTERS
+    console.log("lowercase");
   chooseFrom += letters;
 }
 
@@ -45,8 +42,12 @@ if (isNumber) {
   chooseFrom += numbers;
   //USE NUMBERS
 }
-  console.log(password);
-  return "your password here";
+// var sum = 0;
+// for (var i = 1; i <= num, i++);
+var random = Math.floor(Math.random() * characters.length);
+
+console.log(password);
+return "your password here";
 }
 
 //Write password to the #password input
