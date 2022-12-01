@@ -8,9 +8,11 @@ function generatePassword(){
   var numbers = "1234567890";
   var upLetters = letters.toUpperCase();
   var chooseFrom = "";
+  var characters = "";
+  var pwGen = "";
   
   //First prompt: length of password
-    var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
+  var pwLength = prompt("This generator makes passwords between 8 and 128 characters. How many characters do you need?");
 
   for (pwLength; pwLength < 8 || pwLength > 128;) {
     alert("Please request a length between 8 and 128 characters.");
@@ -52,11 +54,11 @@ if (!isUpperCase && !isLowerCase && !isSpecial && !isNumber) {
 for (var i = 0; i < pwLength; i++) {
   var random = Math.floor(Math.random() * chooseFrom.length);
   var characters = chooseFrom.charAt(random);
-  password = password.concat(characters);
-  console.log("password" + password);
+  pwGen = pwGen.concat(characters);
+  console.log(pwGen);
 }
 
-return password;
+return pwGen;
 }
 
 //Write password to the #password input
