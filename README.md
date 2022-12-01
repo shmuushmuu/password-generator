@@ -17,9 +17,9 @@ It's always swordfish.
 ## Visuals
 The website should look like this when a correct password is generated (with DevTools open)
 
-![Screenshot1](/images/generated-password1.png)
+![Screenshot1](/images/generated-password-1.png)
 
-![Screenshot2](/images/generated-password2.png)
+![Screenshot2](/images/generated-password-2.png)
 
 This is the way it will look if the user makes an error.
 ![Screenshot3](/images/password-error.png)
